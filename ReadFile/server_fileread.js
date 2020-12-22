@@ -4,8 +4,6 @@ const { exit } = require('process');
 
 http.createServer(function(req, res) {
     res.writeHead(200, {'Content-Type':'application/json'});
-    // res.write('<h1>Node.js</h1>');
-
     fs.readFile('test.json', 'utf-8', function(err, data) {
         if (err) {
             console.error(err);
